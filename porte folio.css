@@ -1,93 +1,163 @@
-/* Réinitialiser les styles par défaut */
+/* Réinitialisation de certains styles par défaut */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Appliquer une police personnalisée */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-image: url(font.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Styler le header */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Styler la navigation */
-nav {
-  background-color: #555;
-  color: #fff;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav li {
-  margin: auto;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Styler les sections */
-section {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   margin: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  color: #333;
+  background-color: #f4f4f4;
+  text-align: center; /* Centre le texte globalement */
+}
+
+/* En-tête */
+header {
+  background: #005A9C;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: 3px solid #033;
+}
+
+header h1 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* Navigation */
+/* Barre de navigation */
+nav {
+  background-color: #333; /* Couleur de fond */
+  overflow: hidden; /* Garantit que les éléments sont contenus dans la barre de navigation */
+}
+
+/* Liste de la barre de navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Utilise Flexbox pour un alignement horizontal */
+  justify-content: center; /* Centre les éléments de la liste */
+}
+
+/* Éléments de la liste */
+nav ul li {
+  margin: 0 20px; /* Espacement entre les éléments de la liste */
+}
+
+/* Liens de la barre de navigation */
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px; /* Taille du texte */
+  font-weight: bold; /* Rend le texte en gras */
+  transition: color 0.3s, background-color 0.3s; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol sur les liens */
+nav ul li a:hover {
+  background-color: #007bff; /* Couleur de fond au survol */
+  color: #ffffff; /* Couleur du texte au survol */
+  border-radius: 5px; /* Arrondit les coins du lien au survol */
+}
+
+/* Style actif (peut être utilisé pour indiquer la page actuelle) */
+nav ul li a.active {
+  background-color: #0056b3;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+/* Contenu principal et sections */
+div {
+  max-width: 800px; /* Limite la largeur du contenu */
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  text-align: left; /* Alignement du texte des sections à gauche */
 }
 
 section h2 {
-  font-size: 24px;
+  color: #005A9C;
   margin-bottom: 10px;
-  text-align: center;
 }
 
-section p {
-  font-size: 16px;
-  line-height: 1.5;
+section.centre {
   text-align: center;
+  align-items: center;
 }
 
-/* Styler le lien LinkedIn */
-section#Contact a {
-  background-color: #0077B5;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+a.button {
   display: inline-block;
-  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-section#Contact a:hover {
-  background-color: #005082;
+a.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
-/* Styler le footer */
+
+a.button:active {
+  background-color: #004299;
+  transform: translateY(1px);
+}
+
+/* Pied de page */
 footer {
-  background-color: #333;
+  background: #333;
   color: #fff;
-  padding: 10px;
   text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.bouton-windows {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #0078D7;
+  border: none;
+  border-radius: 15px;
+}
+
+.bouton-windows:hover {background-color: #0056A6}
+
+.bouton-windows:active {
+  background-color: #0056A6;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
 }
